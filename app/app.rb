@@ -1,15 +1,13 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
+require 'haml'
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
       [username, password] == ['admin', 'admin']
 end
 
 get '/' do
-      "You're welcome"
+      haml :index
 end
 
-get '/foo' do
-      "You're also welcome"
-end

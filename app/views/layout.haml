@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title Timesheet 
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/footer.css" rel="stylesheet" media="screen">
+  %body
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    %div#wrap
+      .container
+        .page-header
+          %h1 Timesheet App
+        = yield
+    
+
+      %div#push
+
+    %div#footer
+      .container
+        %p{ :class => "muted credit" } 
+          &copy; 
+          %a{:href => 'http://mattgreensmith.net'} Matt Greensmith
+          2012
+
