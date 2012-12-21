@@ -1,0 +1,16 @@
+.row
+  .span3
+    %table.table.table-condensed.table-hover
+      %thead
+        %tr
+          - %W(&nbsp M T W T F S S).each do |column|
+            %td= "<strong>#{column}</strong>"
+      %tbody
+        - @rows.each do |row|
+          %tr
+            - row.each do |column|
+              %td= column
+  .span1
+  .span8
+    %p.lead
+      Choose a week to get started.
